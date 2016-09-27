@@ -10,6 +10,7 @@
 ## Same console application with one entry point
 - main
     - [entry point](console-one/src/main/scala/com/seanshubin/entrypoint/console/one/EntryPoint.scala)
+    - [dispatcher](console-one/src/main/scala/com/seanshubin/entrypoint/console/one/Dispatcher.scala)
 - test
     - [test](console-one/src/test/scala/com/seanshubin/entrypoint/console/one/DispatcherTest.scala)
 

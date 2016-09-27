@@ -24,6 +24,23 @@ class TopLevelDispatcherTest extends FunSuite {
     assert(stubResponse.body.trim === "render foo page")
   }
 
+  test("bar") {
+    // given
+    val dummyServletConfig: ServletConfig = null
+    val topLevelDispatcher = new TopLevelDispatcher(dummyServletConfig)
+    val uriString = "http://some.domain/bar"
+    val stubRequest = new StubHttpServletRequest(uriString)
+    val stubResponse = new StubHttpServletResponse
+
+    //when
+    topLevelDispatcher.dispatch(stubRequest, stubResponse)
+
+    //then
+    assert(stubResponse.contentType === "text/plain; charset=utf-8")
+    assert(stubResponse.statusCode === SC_OK)
+    assert(stubResponse.body.trim === "render bar page")
+  }
+
   class StubHttpServletRequest(uriString: String) extends HttpServletRequestNotImplemented {
     override def getRequestURI: String = uriString
   }

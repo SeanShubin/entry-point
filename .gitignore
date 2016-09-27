@@ -1,0 +1,13 @@
+**/.idea
+**/out
+**/*.iml
+**/*.ipr
+**/*.iws
+**/target
+generated
+local-config
+*~
+*#
+.#*
+.DS_Store
+

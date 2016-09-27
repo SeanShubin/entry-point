@@ -1,0 +1,18 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+    <servlet>
+        <servlet-name>foo</servlet-name>
+        <servlet-class>com.seanshubin.entrypoint.web.two.FooServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>bar</servlet-name>
+        <servlet-class>com.seanshubin.entrypoint.web.two.BarServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>foo</servlet-name>
+        <url-pattern>/foo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>bar</servlet-name>
+        <url-pattern>/bar</url-pattern>
+    </servlet-mapping>
+</web-app>

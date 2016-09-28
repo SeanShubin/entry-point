@@ -5,7 +5,7 @@
     - [foo](console-two/src/main/scala/com/seanshubin/entrypoint/console/two/EntryPointFoo.scala)
     - [bar](console-two/src/main/scala/com/seanshubin/entrypoint/console/two/EntryPointBar.scala)
 - behavior is outside the application, possibly in a script
-- this makes it here to test
+- this makes it hard to test
 
 ## Same console application with one entry point
 - main

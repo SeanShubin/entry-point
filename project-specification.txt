@@ -1,0 +1,35 @@
+{
+  prefix [com seanshubin]
+  name [entrypoint]
+  description 'Generate project structure from a minimal specification'
+  version 0.1-SNAPSHOT
+  developer {
+    name 'Sean Shubin'
+    githubName SeanShubin
+    mavenUserName SeanShubin
+    organization 'Sean Shubin'
+    url http://seanshubin.com/
+  }
+  dependencies {
+    scala-library {
+      group org.scala-lang
+      artifact scala-library
+    }
+    scala-test {
+      group org.scalatest
+      artifact scalatest_2.12
+      scope test
+    }
+    servlet-api {
+      group    javax.servlet
+      artifact servlet-api
+    }
+  }
+  global [scala-library scala-test]
+  modules {
+    console-one []
+    console-two []
+    web-one [servlet-api]
+    web-two [servlet-api]
+  }
+}
